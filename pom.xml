@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Parent project coordinates -->
+	<groupId>com.farmersupport</groupId>
+	<artifactId>farmer-support-system</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>farmer-support-system</name>
+	<description>Microservices-based Farmer Support System</description>
+
+	<!-- Spring Boot parent -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.3.4</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<!-- Dependency & plugin versions for all modules -->
+	<dependencyManagement>
+		<dependencies>
+			<!-- Example: Spring Boot Web starter -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>3.3.4</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<modules>
+		<module>farmer-service</module>
+		<module>crop-service</module>
+		<module>market-service</module>
+		<module>notification-service</module>
+		<module>config-server</module>
+		<module>eureka-server</module>
+		<module>api-gateway</module>
+	</modules>
+
+</project>
